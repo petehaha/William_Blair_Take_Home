@@ -8,7 +8,7 @@ A two-stage pipeline that takes a target company profile, scores historical acqu
 
 **1. Install dependencies**
 ```bash
-pip install pandas numpy matplotlib seaborn ollama pydantic jinja2 weasyprint markdown duckduckgo-search
+pip install pandas numpy ollama pydantic jinja2 weasyprint markdown duckduckgo-search
 ```
 
 **2. Start Ollama and sign in**
@@ -147,7 +147,3 @@ All N acquirer agents run concurrently in a `ThreadPoolExecutor`, staggered by a
 5. **Richer tool calls with dedicated M&A data sources** — the current `web_search` tool is general-purpose. Replacing or supplementing it with dedicated integrations would substantially improve assessment quality: PitchBook/Mergermarket APIs for verified deal data, SEC EDGAR for public filing context, and company websites for stated strategic priorities. Each could be a separate tool the model selects from based on what it needs.
 
 ---
-
-## Dependencies
-
-Jupyter kernel: `Python 3.13 (acquirer)` — see `.venv/` in repo root.
