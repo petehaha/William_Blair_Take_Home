@@ -103,7 +103,6 @@ All N acquirer agents run concurrently in a `ThreadPoolExecutor`, staggered by a
 ## Assumptions
 
 **About the dataset**
-- The 500 transactions are representative of the acquirers' actual deal preferences
 - Acquirers with only 1–2 deals in the dataset have high uncertainty; their profiles use a ±40% size range as a std proxy
 - "National" and "Multi-Regional" geography entries are treated as partial matches (0.5×) for any specific region
 - Deal year is used as a proxy for acquirer activity recency; the dataset spans 2016–2024
