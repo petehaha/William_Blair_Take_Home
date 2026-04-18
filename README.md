@@ -130,7 +130,7 @@ All N acquirer agents run concurrently in a `ThreadPoolExecutor`, staggered by a
 | JSON validation failures | Assessment skipped after `MAX_RETRIES` exhausted | Smaller models fail more frequently |
 | Sector label mismatch | Target sector not found in dataset → falls back to full dataset for percentile resolution | User must use exact sector names from the dataset |
 | Recency bias | Acquirers with no deals since 2020 score ≤ 33 on recency regardless of fit | By design, but may penalise legitimate strategic buyers |
-| PDF rendering | WeasyPrint requires system-level Cairo/Pango libs | `pip install weasyprint` alone may not suffice on some Linux installs |
+| LLM Rate Limiting | Ollama rate limits users, so parallelizing the workflow can cause errors despite staggered API calls | In paid models, this rate limit would also certainly be increased, reducing the latency and error rate. |
 
 ---
 
